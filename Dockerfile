@@ -1,5 +1,5 @@
-FROM nginx
+FROM nginx:alpine
 
-ADD nginx.conf /src/nginx.conf
+COPY nginx.conf /src/nginx.conf
 
 ENTRYPOINT ["nginx", "-c", "/src/nginx.conf"]
